@@ -1,0 +1,14 @@
+@DailyCheck
+@All
+
+Feature: Add to my account
+
+  Scenario: Free user can add files to his account
+    Given User go to 4shared
+    And User go to search page
+    And he searches for the "Kung Fu Bear.flv" file
+    When he clicks on 'Add to my account' button
+    And User logs in from div with correct credentials "Test1@deng.4shared.com" and "1"
+    Then green notification appears
+    And file is added to account
+    But We need to delete that file
